@@ -18,6 +18,10 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 
 <body>
@@ -261,7 +265,7 @@
               <svg viewBox="0 0 100 50" width="100%" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="50" cy="20" r="17" fill="#1264e7" visibility="visible"/>
               </svg>
-              <svg viewBox=" 0 0 100 100" style="border: none; margin-left:26%; margin-top:1%; width:190%">
+              <svg class="item "viewBox=" 0 0 100 100" style="border: none; margin-left:26%; margin-top:1%; width:190%">
                 <path stroke="white" stroke-width="0.1" fill="none" d="M5 2 Q3 2.1, 1.5 3.5" />
                 <path style="opacity: 0.1; fill: none; stroke: rgb(255, 255, 255);" stroke-width="0.1" fill="none" d="M5 12 Q3 11.9, 1.5 10.5" />
                 <path stroke="white" stroke-width="0.1" fill="none" d="M8.5 10.5 Q7 11.9, 5 12" />
@@ -320,7 +324,7 @@
                 <circle onclick=click(5) cx="5" cy="12" r="0.2" fill="#137db9" stroke="white" stroke-width="0.1"/>
                 <circle onclick=click(4) cx="8.5" cy="10.5" r="0.2" fill="#137db9" stroke="white" stroke-width="0.1"/>
                 <circle onclick=click(3) cx="10" cy="7" r="0.2" fill="#137db9" stroke="white" stroke-width="0.1"/>
-                <circle onclick=click(1) cx="8.5" cy="3.5" r="0.2" fill="#137db9" stroke="white" stroke-width="0.1"/>
+                <circle onclick=click(2) cx="8.5" cy="3.5" r="0.2" fill="#137db9" stroke="white" stroke-width="0.1"/>
                 <circle onclick=click(6) cx="1.5" cy="10.5" r="0.2" fill="#137db9" stroke="white" stroke-width="0.1"/>
                 <circle onclick=click(0) cx ="1.5" cy="3.5" r="0.2" fill="#137db9" stroke="white" stroke-width="0.1"/>
             </svg>
@@ -370,8 +374,6 @@
                 </script>
         
             <script>
-              AOS.init();
-
                 var owl = $('.owl-carousel');
                 owl.owlCarousel({
                     loop: false,
@@ -381,7 +383,9 @@
                     touchDrag  : true,
                     margin: 0,
                     stagePadding:0,
-animateOut: 'fadeOut',
+                    transitionStyle: "ease" ,
+                    animateIn: 'easeIn',
+                    slideTransition:'linear',
                     responsive: {
                         0: {
                             items: 1,
